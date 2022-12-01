@@ -9,3 +9,9 @@ admitted.
 3. What is the list of universities that got a particular rating.
 
 * The Data set we are using is Student admission Dataset which is obtained from Kaggel.
+
+# modules used:
+* os module: We will use os Module for operating with  files.
+* We will find how to import csv files into python. I have taken information from this source
+* We can use CSV module for loading CSV data into python to make calculations. 
+  Resources: https://docs.python.org/3/library/csv.html
