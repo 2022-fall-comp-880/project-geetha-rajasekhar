@@ -1,7 +1,7 @@
 """
 Represents a data-set of Admissions
 
-Authors:Geethanjali Allam, Rajasekar Dasari
+Authors:Geethanjali Allam, Rajasekhar Dasari
 """
 
 
@@ -44,4 +44,15 @@ class Admissions:
         Returns : List
         """
 
+    def histogram_Calculation(self) -> dict:
+            """
+             Create a dictionary of university serial number with a particular rating.
 
+             Returns:
+                dictionary
+                    keys : integer, rating
+                    values : list of integers, representing a particular university
+            """
+
+def main():
+        """Run code to check basic functionality."""
