@@ -3,6 +3,8 @@ Represents a data-set of Admissions
 
 Authors:Geethanjali Allam, Rajasekhar Dasari
 """
+import csv
+import os
 
 
 class Admissions:
@@ -21,11 +23,21 @@ class Admissions:
         """
         self.filename = filename
 
-    def read_to_list(self, value):
-        """
-        Reads data from a csv file to the list.
-        Return: List
-        """
+    def __str__(self):
+        """Convert to string representation."""
+        return str(self.filename)
+
+    def csv_to_dict(self):
+        """ Reading data from adm_data.csv file into a dictionary called df."""
+        try:
+            df = {}
+            with open(self.filename, encoding='utf-8', newline='') as csv_file:
+                reader = csv.reader(csv_file)
+                for count, row in enumerate(reader):
+                    df[count] = row
+            return df
+        except Exception:
+            return None
 
     def average_value_calculation(self):
         """
@@ -45,7 +57,7 @@ class Admissions:
         """
 
     def histogram_Calculation(self) -> dict:
-            """
+        """
              Create a dictionary of university serial number with a particular rating.
 
              Returns:
@@ -53,6 +65,29 @@ class Admissions:
                     keys : integer, rating
                     values : list of integers, representing a particular university
             """
+        try:
+            out = {}
+            df = self.csv_to_dict()
+            for i in df:
+                if i != 0:
+                    temp = df[i]
+                    if int(temp[3]) in out:
+                        out[int(temp[3])].append(int(temp[0]))
+                    else:
+                        out[int(temp[3])] = [int(temp[0])]
+            return out
+        except Exception:
+            return None
+
 
 def main():
-        """Run code to check basic functionality."""
+    """Run code to check basic functionality."""
+    data_dir = os.path.dirname(__file__) + "/../data"
+    out = Admissions(f'{data_dir}/adm_data.csv')
+    print(out.average_value_calculation("GRE Score"))
+    print(out.average_value_calculation("TOEFL Score"))
+    print(out.histogram_calculation())
+
+
+if __name__ == '__main__':
+    main()
