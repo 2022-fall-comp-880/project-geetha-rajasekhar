@@ -1,6 +1,6 @@
 # Project title:Data for Admission in the University.
 
-**Author**: Venkata Rajasekhar. Dasari
+**Author**: Venkata Rajasekhar Dasari, Geethanjali Allam
 **Date**: Date proposal was created on 11/16/2022 at 8pm.
 
 
@@ -12,7 +12,7 @@ admitted.
 ## Investigative Questions
 1. What are the average TOEFL and GRE score of all students in this university?
 2. What is the probability of getting admission in the university based on average scores?
-3. What is the average rating given by the students?
+3. What is the list of universities that got a particular rating.
 
 ## Approach
 Data that is maintained include student demographic data, academic test scores (TOEFL, GRE, etc.), grade point averages,

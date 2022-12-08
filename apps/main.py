@@ -23,6 +23,7 @@ class Admissions:
         """
         self.filename = filename
 
+
     def __str__(self):
         """Convert to string representation."""
         return str(self.filename)
@@ -39,13 +40,15 @@ class Admissions:
         except Exception:
             return None
 
-    def average_value_calculation(self, field):
+    def average_value_calculation(self):
+    main
         """
         Calculates Average values for GRE and TOEFL scores with the help of a dataset.
 
         Creates and returns a float value as average GRE and TOEFL scores
 
         Return: float
+
 
         Writer: Rajasekar
         Reviewer: Geethanjali
@@ -60,8 +63,10 @@ class Admissions:
         """
 
 
-    def histogram_calculation(self) -> dict:
-        """
+   
+
+    def histogram_Calculation(self) -> dict:
+            """
              Create a dictionary of university serial number with a particular rating.
 
              Returns:
@@ -97,3 +102,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+                    values : list of integers, representing a particular university
+            """
+
+
