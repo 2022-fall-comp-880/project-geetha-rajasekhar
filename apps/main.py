@@ -47,9 +47,20 @@ class Admissions:
 
         Return: float
 
-        Writer: Rajasekar
+
+        Writer: Rajasekhar
         Reviewer: Geethanjali
         """
+        try:
+            Sum = 0
+            df = self.csv_to_dict()
+            index_of_field = df[0].index(field)
+            for i in df:
+                if i != 0:
+                    Sum += int(df[i][index_of_field])
+            return Sum / (len(df) - 1)
+        except Exception:
+            return None
 
     def probability_prediction(self) -> list:
         """ Creates a list With the probability weather the student can get admission in  the university or not.
@@ -59,17 +70,17 @@ class Admissions:
         Returns : List of tuples.
         """
 
-    def histogram_calculation(self) -> dict:
+    def histogram_Calculation(self) -> dict:
         """
              Create a dictionary of university serial number with a particular rating.
 
              Returns:
                 dictionary
                     keys : integer, rating
-                    values : list of integers, represening a particular university
+                    values : list of integers, representing a particular university
              Writer: Geethanjali
-             Reviewer: Rajasekar
-            """
+             Reviewer: Rajasekhar
+        """
         try:
             out = {}
             df = self.csv_to_dict()
@@ -89,7 +100,7 @@ def main():
     """Run code to check basic functionality."""
     data_dir = os.path.dirname(__file__) + "/../data"
     out = Admissions(f'{data_dir}/adm_data.csv')
-    print(out.histogram_calculation())
+    print(out.histogram_Calculation())
 
 
 if __name__ == '__main__':

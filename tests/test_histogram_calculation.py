@@ -18,7 +18,7 @@ class TestHistogramCalculation(unittest.TestCase):
 
     def test_histogram_multiple_entries(self):
         """Test case 1 using stats.txt."""
-        actual_result = self.adm_data_all.histogram_calculation()
+        actual_result = self.adm_data_all.histogram_Calculation()
         expected_result = {
             4: [1, 2, 12, 13, 22, 33, 44, 50, 53, 54, 66, 70, 74, 82, 86, 90,
                 96, 99, 107, 108, 112, 116, 118, 123, 125, 136, 144, 149, 151,
@@ -57,20 +57,20 @@ class TestHistogramCalculation(unittest.TestCase):
 
     def test_histogram_ten_entries(self):
         """Test case 2 using stats_10.txt with ten rows."""
-        actual_result = self.adm_data_10.histogram_calculation()
+        actual_result = self.adm_data_10.histogram_Calculation()
         expected_result = {2: [391, 394], 3: [392, 396, 397, 399],
                            4: [393, 395, 398, 400]}
         self.assertDictEqual(actual_result, expected_result)
 
     def test_histogram_five_entries(self):
         """Test case 3 using s tats_1.txt with one row."""
-        actual_result = self.adm_data_5.histogram_calculation()
+        actual_result = self.adm_data_5.histogram_Calculation()
         expected_result = {2: [5], 3: [3, 4], 4: [1, 2]}
         self.assertDictEqual(actual_result, expected_result)
 
     def test_histogram_zero_entries(self):
         """Test case 3 using stats_1.txt with one row."""
-        actual_result = self.adm_data_empty.histogram_calculation()
+        actual_result = self.adm_data_empty.histogram_Calculation()
         expected_result = {}
         self.assertDictEqual(actual_result, expected_result)
 
