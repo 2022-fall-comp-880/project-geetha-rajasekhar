@@ -6,7 +6,7 @@ from apps.main import Admissions
 
 
 class TestProbabilityPrediction(unittest.TestCase):
-    """Test `gender_freq_by_country()` method."""
+    """Test gender_freq_by_country() method."""
 
     def setUp(self):
         """Create DevStats objects for the three testing cases."""
