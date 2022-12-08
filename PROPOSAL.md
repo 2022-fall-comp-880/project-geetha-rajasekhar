@@ -36,7 +36,7 @@ in the university.
 * I did expected average  of CGPA 8.592985.
 * I did expected average of chance of Admit 0.72459.
 
- 
+
 ## New Python Packages or Modules
 * Math module: We will use Math Module for Mathematics calculations for taken data to get expected results.
 * Pandas: We will use Pandas to load csv files to python interpreter. From the resource 

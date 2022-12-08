@@ -59,7 +59,6 @@ class Admissions:
         Returns : List of tuples.
         """
 
-
     def histogram_calculation(self) -> dict:
         """
              Create a dictionary of university serial number with a particular rating.
@@ -90,8 +89,6 @@ def main():
     """Run code to check basic functionality."""
     data_dir = os.path.dirname(__file__) + "/../data"
     out = Admissions(f'{data_dir}/adm_data.csv')
-    print(out.average_value_calculation("GRE Score"))
-    print(out.average_value_calculation("TOEFL Score"))
     print(out.histogram_calculation())
 
 
