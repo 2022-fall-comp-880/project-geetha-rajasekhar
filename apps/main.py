@@ -50,16 +50,6 @@ class Admissions:
         Writer: Rajasekar
         Reviewer: Geethanjali
         """
-        try:
-            Sum = 0
-            df = self.csv_to_dict()
-            index_of_field = df[0].index(field)
-            for i in df:
-                if i != 0:
-                    Sum += int(df[i][index_of_field])
-            return Sum / (len(df) - 1)
-        except Exception:
-            return None
 
     def probability_prediction(self) -> list:
         """ Creates a list With the probability weather the student can get admission in  the university or not.
