@@ -78,6 +78,7 @@ class Admissions:
                 dictionary
                     keys : integer, rating
                     values : list of integers, representing a particular university
+            """
              Writer: Geethanjali
              Reviewer: Rajasekhar
         """
@@ -97,12 +98,12 @@ class Admissions:
 
 
 def main():
-    """
-    Run code to check basic functionality.
-    """
+    """Run code to check basic functionality."""
     data_dir = os.path.dirname(__file__) + "/../data"
     out = Admissions(f'{data_dir}/adm_data.csv')
-    print(out.histogram_Calculation())
+    print(out.average_value_calculation("GRE Score"))
+    print(out.average_value_calculation("TOEFL Score"))
+    print(out.histogram_calculation())
 
 
 if __name__ == '__main__':
