@@ -27,3 +27,18 @@ class TestProbabilityPrediction(unittest.TestCase):
         actual_result = self.adm_data_10.probability_prediction()
         expected_result = [(393, 326, 112), (395, 329, 111), (396, 324, 110), (398, 330, 116), (400, 333, 117)]
         self.assertListEqual(actual_result, expected_result)
+
+        def test_probability_five_entries(self):
+            """Test case 3 using s tats_1.txt with one row."""
+            actual_result = self.adm_data_5.probability_prediction()
+            expected_result = [(1, 337, 118)]
+            self.assertListEqual(actual_result, expected_result)
+
+        def test_probability_zero_entries(self):
+            """Test case 3 using stats_1.txt with one row."""
+            actual_result = self.adm_data_empty.probability_prediction()
+            expected_result = []
+            self.assertListEqual(actual_result, expected_result)
+
+if __name__ == '__main__':
+        unittest.main()
