@@ -101,7 +101,9 @@ class Admissions:
 
 
 def main():
-    """Run code to check basic functionality."""
+    """
+    Run code to check basic functionality.
+    """
     data_dir = os.path.dirname(__file__) + "/../data"
     out = Admissions(f'{data_dir}/adm_data.csv')
     print(out.average_value_calculation("GRE Score"))
