@@ -23,7 +23,6 @@ class Admissions:
         """
         self.filename = filename
 
-
     def __str__(self):
         """Convert to string representation."""
         return str(self.filename)
@@ -71,11 +70,8 @@ class Admissions:
         Returns : List of tuples.
         """
 
-
-
-
     def histogram_Calculation(self) -> dict:
-            """
+        """
              Create a dictionary of university serial number with a particular rating.
 
              Returns:
@@ -84,20 +80,20 @@ class Admissions:
                     values : list of integers, representing a particular university
              Writer: Geethanjali
              Reviewer: Rajasekhar
-            """
-            try:
-                out = {}
-                df = self.csv_to_dict()
-                for i in df:
-                    if i != 0:
-                        temp = df[i]
-                        if int(temp[3]) in out:
-                            out[int(temp[3])].append(int(temp[0]))
-                        else:
-                            out[int(temp[3])] = [int(temp[0])]
-                return out
-            except Exception:
-                return None
+        """
+        try:
+            out = {}
+            df = self.csv_to_dict()
+            for i in df:
+                if i != 0:
+                    temp = df[i]
+                    if int(temp[3]) in out:
+                        out[int(temp[3])].append(int(temp[0]))
+                    else:
+                        out[int(temp[3])] = [int(temp[0])]
+            return out
+        except Exception:
+            return None
 
 
 def main():
@@ -106,14 +102,8 @@ def main():
     """
     data_dir = os.path.dirname(__file__) + "/../data"
     out = Admissions(f'{data_dir}/adm_data.csv')
-    print(out.average_value_calculation("GRE Score"))
-    print(out.average_value_calculation("TOEFL Score"))
-    print(out.histogram_calculation())
+    print(out.histogram_Calculation())
 
 
 if __name__ == '__main__':
     main()
-
-
-
-
