@@ -40,8 +40,7 @@ class Admissions:
         except Exception:
             return None
 
-    def average_value_calculation(self):
-    main
+    def average_value_calculation(self, field):
         """
         Calculates Average values for GRE and TOEFL scores with the help of a dataset.
 
@@ -50,9 +49,19 @@ class Admissions:
         Return: float
 
 
-        Writer: Rajasekar
+        Writer: Rajasekhar
         Reviewer: Geethanjali
         """
+        try:
+            Sum = 0
+            df = self.csv_to_dict()
+            index_of_field = df[0].index(field)
+            for i in df:
+                if i != 0:
+                    Sum += int(df[i][index_of_field])
+            return Sum / (len(df) - 1)
+        except Exception:
+            return None
 
     def probability_prediction(self) -> list:
         """ Creates a list With the probability weather the student can get admission in  the university or not.
@@ -63,7 +72,7 @@ class Admissions:
         """
 
 
-   
+
 
     def histogram_Calculation(self) -> dict:
             """
@@ -72,23 +81,23 @@ class Admissions:
              Returns:
                 dictionary
                     keys : integer, rating
-                    values : list of integers, represening a particular university
+                    values : list of integers, representing a particular university
              Writer: Geethanjali
-             Reviewer: Rajasekar
+             Reviewer: Rajasekhar
             """
-        try:
-            out = {}
-            df = self.csv_to_dict()
-            for i in df:
-                if i != 0:
-                    temp = df[i]
-                    if int(temp[3]) in out:
-                        out[int(temp[3])].append(int(temp[0]))
-                    else:
-                        out[int(temp[3])] = [int(temp[0])]
-            return out
-        except Exception:
-            return None
+            try:
+                out = {}
+                df = self.csv_to_dict()
+                for i in df:
+                    if i != 0:
+                        temp = df[i]
+                        if int(temp[3]) in out:
+                            out[int(temp[3])].append(int(temp[0]))
+                        else:
+                            out[int(temp[3])] = [int(temp[0])]
+                return out
+            except Exception:
+                return None
 
 
 def main():
@@ -102,7 +111,7 @@ def main():
 
 if __name__ == '__main__':
     main()
-                    values : list of integers, representing a particular university
-            """
+
+
 
 
