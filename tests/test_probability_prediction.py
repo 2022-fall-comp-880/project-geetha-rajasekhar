@@ -36,9 +36,9 @@ class TestProbabilityPrediction(unittest.TestCase):
 
         def test_probability_zero_entries(self):
             """Test case 3 using stats_1.txt with one row."""
-            actual_result = self.adm_data_empty.probability_prediction()
+            acual_result = self.adm_data_empty.probability_prediction()
             expected_result = []
-            self.assertListEqual(actual_result, expected_result)
+            self.assertListEqual(acual_result, expected_result)
 
 if __name__ == '__main__':
         unittest.main()
