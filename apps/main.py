@@ -3,8 +3,8 @@ Represents a data-set of Admissions
 
 Authors:Geethanjali Allam, Rajasekhar Dasari
 """
-import csv
 import os
+import csv
 
 
 class Admissions:
@@ -39,21 +39,35 @@ class Admissions:
         except Exception:
             return None
 
-    def average_value_calculation(self):
+    def average_value_calculation(self, field):
         """
         Calculates Average values for GRE and TOEFL scores with the help of a dataset.
 
         Creates and returns a float value as average GRE and TOEFL scores
 
         Return: float
+
+
+        Writer: Rajasekhar
+        Reviewer: Geethanjali
         """
+        try:
+            Sum = 0
+            df = self.csv_to_dict()
+            index_of_field = df[0].index(field)
+            for i in df:
+                if i != 0:
+                    Sum += int(df[i][index_of_field])
+            return Sum / (len(df) - 1)
+        except Exception:
+            return None
 
     def probability_prediction(self) -> list:
         """ Creates a list With the probability weather the student can get admission in  the university or not.
 
         gets average values from average_value_calculation() method and compares them with individual university scores.
 
-        Returns : List
+        Returns : List of tuples.
         """
 
     def histogram_Calculation(self) -> dict:
@@ -65,6 +79,9 @@ class Admissions:
                     keys : integer, rating
                     values : list of integers, representing a particular university
             """
+             Writer: Geethanjali
+             Reviewer: Rajasekhar
+        """
         try:
             out = {}
             df = self.csv_to_dict()

@@ -1,4 +1,4 @@
-# DESISIGN DOCUMENT
+# DESIGN DOCUMENT
 
 ## Investigative Question 1:
 **What are the average TOEFL and GRE score of all students in this university?**
