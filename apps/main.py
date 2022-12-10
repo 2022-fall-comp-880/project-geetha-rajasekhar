@@ -69,14 +69,14 @@ class Admissions:
 
         Returns : List of tuples.
         """
-        try:
+        """try:
             out = []
             df = self.csv_to_dict()
             for i in df:
 
             return out
         except Exception:
-            return None
+            return None"""
 
     def histogram_Calculation(self):
         """
