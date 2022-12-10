@@ -62,15 +62,23 @@ class Admissions:
         except Exception:
             return None
 
-    def probability_prediction(self) -> list:
+    def probability_prediction(self):
         """ Creates a list With the probability weather the student can get admission in  the university or not.
 
         gets average values from average_value_calculation() method and compares them with individual university scores.
 
         Returns : List of tuples.
         """
+        """try:
+            out = []
+            df = self.csv_to_dict()
+            for i in df:
 
-    def histogram_Calculation(self) -> dict:
+            return out
+        except Exception:
+            return None"""
+
+    def histogram_Calculation(self):
         """
              Create a dictionary of university serial number with a particular rating.
 
