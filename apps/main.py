@@ -69,14 +69,21 @@ class Admissions:
 
         Returns : List of tuples.
         """
-        """try:
+        try:
             out = []
             df = self.csv_to_dict()
             for i in df:
+                if i != 0:
+                    if self.average_value_calculation('GRE Score') < int(
+                        df[i][1]) and self.average_value_calculation(
+                         'TOEFL Score') < int(df[i][2]):
+                        out.append(
+                            (int(df[i][0]), int(df[i][1]), int(df[i][2])))
+                return out
 
             return out
         except Exception:
-            return None"""
+            return None
 
     def histogram_Calculation(self):
         """
