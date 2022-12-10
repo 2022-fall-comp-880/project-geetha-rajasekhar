@@ -114,11 +114,7 @@ class TestProbabilityPrediction(unittest.TestCase):
             expected_result = []
             self.assertListEqual(actual_result, expected_result())
 
-    def test_probability_zero_entries(self):
-        """Test case 3 using stats_1.txt with one row."""
-        acual_result = self.adm_data_empty.probability_prediction()
-        expected_result = []
-        self.assertListEqual(acual_result, expected_result)
+
 
 
 
