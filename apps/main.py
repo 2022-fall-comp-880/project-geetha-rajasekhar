@@ -76,11 +76,9 @@ class Admissions:
                 if i != 0:
                     if self.average_value_calculation('GRE Score') < int(
                         df[i][1]) and self.average_value_calculation(
-                         'TOEFL Score') < int(df[i][2]):
+                        'TOEFL Score') < int(df[i][2]):
                         out.append(
                             (int(df[i][0]), int(df[i][1]), int(df[i][2])))
-                return out
-
             return out
         except Exception:
             return None
@@ -120,6 +118,7 @@ def main():
     print(out.average_value_calculation("GRE Score"))
     print(out.average_value_calculation("TOEFL Score"))
     print(out.histogram_Calculation())
+    print(out.probability_prediction())
 
 
 if __name__ == '__main__':
