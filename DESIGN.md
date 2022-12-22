@@ -40,5 +40,7 @@
 * Using with open method to read data as filename from a csv file.
 * using for loop the data is iterated from an enumerate function to get the index values as well
 * returning that `data_dict`.
+### def main():
+* This method is used to call all the meathods of `Admission class` with the help of an object called `out`.
 
 
