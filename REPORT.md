@@ -110,5 +110,58 @@ Writer: Geethanjali
 * Using the assertEqual statement the `actual_result` and `expected_result` is compared.
 * if the contents are equal then the testcase will pass.
 
+## class TestHistogramCalculation(unittest.TestCase):
+* Author: Raja Shekar
+* This class is created to test the `histogram_Calculation()` method in the `Admissions` class .
+### def test_average_multiple_entries(self):
+* In this method the data in `adm_data.csv'` file is tested.
+* The `actual_result` is calculated by calling `probability_prediction()` method of the `Admissions ` class with the field GRE Score.
+* The `expected_result` is precalculated using pandas.
+* Using the assertEqual statement the `actual_result` and `expected_result` is compared.
+* if the contents are equal then the testcase will pass.
+### def test_average_zero_entries(self):
+* In this method the data in `adm_empty.csv` file is tested.
+* The `actual_result` is calculated by calling `histogram_Calculation()` method of the `Admissions ` class with the field GRE Score.
+* The `expected_result` is precalculated using pandas.
+* Using the assertEqual statement the `actual_result` and `expected_result` is compared.
+* if the contents are equal then the testcase will pass.
+### test_average_five_entries(self):
+* In this method the data in `adm_five.csv'` file is tested.
+* The `actual_result` is calculated by calling `histogram_Calculation()` method of the `Admissions ` class with the field GRE Score.
+* The `expected_result` is precalculated using pandas.
+* Using the assertEqual statement the `actual_result` and `expected_result` is compared.
+* if the contents are equal then the testcase will pass.
+### def test_average_ten_entries(self):
+* In this method the data in `adm_ten.csv'` file is tested.
+* The `actual_result` is calculated by calling `histogram_Calculation()` method of the `Admissions ` class with the field GRE Score.
+* The `expected_result` is precalculated using pandas.
+* Using the assertEqual statement the `actual_result` and `expected_result` is compared.
+* if the contents are equal then the testcase will pass.
+
+
+
+## 4. Results 
+* Author: Raja Shekar
+### def csv_to_dict(self) -> dict:
+* Returns a dictionary with key as row number and values as list of contents in that row.
+### def average_value_calculation(self, field) -> float:
+* The Return value for this method is a float value, The value is the average of any Attribute passes a parameter to `average_value_calculation()` meathod.
+### def probability_prediction(self) -> list:
+* the return value is a list of tuples, Containing the serial num, GRE score, and TOEFL scores of the universities greater than the average value.
+### def histogram_Calculation(self) -> dict:
+*The return value is a dictionary with key as rating and value as a list of university serial numbers with that particular rating.
+
+## 5. Evaluation:
+Author: Raja Shekar
+### 5.1 What Works and Scope Assumptions :
+* The Assumption is that all the data in the dataset is legitimate and practical data.
+* The average values are calculated based on only 400 universities information, so the value might differ with a bigger or smaller size dataset.
+* Through the questions we can know what university falls in what rating. and what scores are required to get into that universities.
+
+
+### 5.2 Immediate Further Development :
+* Data visualizations can be created to show a graph in which students scores can be updated and check weather the score is above a university graph or below.
+* If a bigger dataset is found with detailed information about the univercity such as univercity name and location the `probability_predection()` can be further simplified and also a map can be created with locations.
+
 
 
